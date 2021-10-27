@@ -1,5 +1,5 @@
-// import PropTypes from 'prop-types';
-// import defaultImg from '../Profile/;
+import PropTypes from "prop-types";
+import defaultImg from "./default-image.png";
 
 function Profile({ name, tag, location, avatar, stats }) {
   return (
@@ -29,16 +29,16 @@ function Profile({ name, tag, location, avatar, stats }) {
   );
 }
 
-// Profile.PropTypes = {
-//   name: PropTypes.string.isRequired,
-//   tag: PropTypes.string.isRequired,
-//   location:PropTypes.string.isRequired,
-//   avatar: PropTypes.string,
-//   stats: {
-//   followers: PropTypes.number.isRequired,
-//   views: PropTypes.number.isRequired,
-//   likes: PropTypes.number.isRequired,
-//   }
+Profile.defaultProps = {
+  avatar: defaultImg,
+};
 
-// }
+Profile.propTypes = {
+  name: PropTypes.string.isRequired,
+  tag: PropTypes.string.isRequired,
+  location: PropTypes.string.isRequired,
+  avatar: PropTypes.string,
+  stats: PropTypes.arrayOf(PropTypes.number),
+};
+
 export default Profile;
