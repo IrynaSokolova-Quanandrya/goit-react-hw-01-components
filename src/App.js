@@ -1,10 +1,11 @@
 import "./App.css";
-import Profile from "./components/Profile/Profile";
-import user from "./components/Profile/profile-user.json";
-import Statistics from "./components/Statistics/Statistics";
-import statisticalData from "./components/Statistics/statistical-data.json";
-// import friends from "./components/FriendList/friends.json";
-console.log(statisticalData);
+// import Profile from "./components/Profile/Profile";
+// import user from "./components/Profile/profile-user.json";
+// import Statistics from "./components/Statistics/Statistics";
+// import statisticalData from "./components/Statistics/statistical-data.json";
+import FriendList from "./components/FriendList/FriendList";
+import friends from "./components/FriendList/friends.json";
+console.log(FriendList);
 export default function App() {
   return (
     <div className="App">
@@ -16,9 +17,9 @@ export default function App() {
         avatar={user.avatar}
         stats={user.stats}
       /> */}
-      <Statistics title="Upload stats" stats={statisticalData} />;
-      <Statistics stats={statisticalData} />;
-      {/* <FriendList friends={friends} />, */}
+      {/* <Statistics title="Upload stats" stats={statisticalData} />;
+      <Statistics stats={statisticalData} />; */}
+      <FriendList friends={friends} />,
     </div>
   );
 }
