@@ -1,4 +1,5 @@
 import PropTypes from "prop-types";
+import "./Profile.css";
 import defaultImg from "./default-image.png";
 
 function Profile({ name, tag, location, avatar, stats }) {
