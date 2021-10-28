@@ -1,10 +1,11 @@
 import PropTypes from "prop-types";
+import Table from "react-bootstrap/Table";
 
 function TransactionHistory({ items }) {
   return (
-    <table className="transaction-history">
+    <Table striped bordered hover>
       <thead>
-        <tr>
+        <tr style={{ backgroundColor: "darkturquoise" }}>
           <th>Type</th>
           <th>Amount</th>
           <th>Currency</th>
@@ -20,7 +21,7 @@ function TransactionHistory({ items }) {
           </tr>
         ))}
       </tbody>
-    </table>
+    </Table>
   );
 }
 
