@@ -1,3 +1,5 @@
+import PropTypes from "prop-types";
+
 function TransactionHistory({ items }) {
   return (
     <table className="transaction-history">
@@ -22,4 +24,18 @@ function TransactionHistory({ items }) {
   );
 }
 
+// Statistics.defaultProps = {
+//   avatar: defaultImg,
+// };
+
+TransactionHistory.propTypes = {
+  items: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.string.isRequired,
+      type: PropTypes.string.isRequired,
+      currency: PropTypes.string.isRequired,
+      amount: PropTypes.string.isRequired,
+    })
+  ),
+};
 export default TransactionHistory;
