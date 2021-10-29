@@ -1,4 +1,4 @@
-// import "./App.css";
+import "./App.css";
 import Profile from "./components/Profile/Profile";
 import user from "./components/Profile/profile-user.json";
 import Statistics from "./components/Statistics/Statistics";
@@ -9,6 +9,7 @@ import TransactionHistory from "./components/TransactionHistory/TransactionHisto
 import transactions from "./components/TransactionHistory/transactions.json";
 
 console.log();
+
 export default function App() {
   return (
     <div className="App">

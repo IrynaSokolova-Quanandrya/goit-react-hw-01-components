@@ -16,8 +16,6 @@ li {
   text-align: center;
   letter-spacing: 0.03em;
   width: 500px;
-  /* border: 1px solid red; */
-  /* border-radius: 15px; */
   box-shadow: 0px 1px 3px rgb(0 0 0 / 12%), 0px 1px 1px rgb(0 0 0 / 14%),
     0px 2px 1px rgb(0 0 0 / 20%);
 }
@@ -40,8 +38,6 @@ li {
   flex-direction: column;
   border: 2px solid #ccc;
   background-color: rgb(233, 227, 227);
-  /* border-bottom-left-radius: 15px;
-  border-bottom-right-radius: 15px; */
   padding-top: 20px;
   padding-bottom: 20px;
 }

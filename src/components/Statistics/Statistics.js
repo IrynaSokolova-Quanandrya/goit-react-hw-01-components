@@ -1,5 +1,6 @@
 import PropTypes from "prop-types";
 import s from "./Statistics.module.css";
+import StatisticsItem from "./StatisticsItem";
 
 function Statistics({ title, stats }) {
   return (
@@ -8,30 +9,16 @@ function Statistics({ title, stats }) {
 
       <ul className={s.statList}>
         {stats.map((stat) => (
-          <li
-            className={s.item}
+          <StatisticsItem
             key={stat.id}
-            style={{ backgroundColor: bgColor() }}
-          >
-            <span className="label">{stat.label}</span>
-            <span className={s.percentage}>{stat.percentage + "%"}</span>
-          </li>
+            label={stat.label}
+            percentage={stat.percentage}
+          />
         ))}
       </ul>
     </section>
   );
 }
-
-const bgColor = () => {
-  let r = Math.round(Math.random() * 255);
-  let g = Math.round(Math.random() * 255);
-  let b = Math.round(Math.random() * 255);
-  return "#" + r.toString(16) + g.toString(16) + b.toString(16);
-};
-console.log(bgColor());
-// Statistics.defaultProps = {
-//   avatar: defaultImg,
-// };
 
 Statistics.propTypes = {
   title: PropTypes.string,
@@ -44,8 +31,4 @@ Statistics.propTypes = {
   ),
 };
 
-// const randomIntegerFromInterval = (colors) => {
-//     return colors[Math.floor(Math.random() * colors.length)]
-// }
-//  body.style.backgroundColor = randomIntegerFromInterval(colors), 1000);
 export default Statistics;

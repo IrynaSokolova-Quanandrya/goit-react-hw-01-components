@@ -1,4 +1,4 @@
-.friend-list {
+.friendList {
   margin: 0;
   padding: 0;
 }
@@ -36,7 +36,7 @@
   width: 20px;
   height: 20px;
   margin: 0 20px 0 0;
-  background-color: blue;
+  background-color: red;
   border-radius: 50%;
 }
 

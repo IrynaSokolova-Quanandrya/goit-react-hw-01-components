@@ -1,6 +1,6 @@
 import PropTypes from "prop-types";
 import Table from "react-bootstrap/Table";
-
+import TransactionItem from "./TransactionItem";
 function TransactionHistory({ items }) {
   return (
     <Table striped bordered hover>
@@ -14,20 +14,17 @@ function TransactionHistory({ items }) {
 
       <tbody>
         {items.map((item) => (
-          <tr key={item.id}>
-            <td>{item.type}</td>
-            <td>{item.amount}</td>
-            <td>{item.currency}</td>
-          </tr>
+          <TransactionItem
+            key={item.id}
+            type={item.type}
+            amount={item.amount}
+            currency={item.currency}
+          />
         ))}
       </tbody>
     </Table>
   );
 }
-
-// Statistics.defaultProps = {
-//   avatar: defaultImg,
-// };
 
 TransactionHistory.propTypes = {
   items: PropTypes.arrayOf(
